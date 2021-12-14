@@ -24,9 +24,9 @@ BACKTITLE="crt-quickdep"
 TITLE="itl_chorus client installer"
 MENU="Choose the appropriate installer please:"
 
-OPTIONS=(1 "Acer Netbook installer (Synfone2, Ubuntu 16, i686 binary)"
-         2 "HP Desktop installer (Synfone2, Archlinux, amd64 binary)"
-         3 "Compile from source and more options(todo)")
+OPTIONS=(1 "32bit binary (i686 Ubuntu 16)"
+         2 "64bit binary (Archlinux)"
+         3 "Compile from source and more options (todo)")
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
@@ -40,25 +40,28 @@ clear
 case $CHOICE in
         1)
             dialog --title "crt quickdep" \
-            --yesno "Would you like to install Sunfone2 for i686 32bit Acer netbooks?" 7 60
+            --yesno "Would you like to install Synfone2 for i686 32bit machines?" 7 60
             result=$?
             case $result in
             0)
             clear
-            echo "Yea uhm this installer hasent been finished lol sucks to be you I guess"
+            echo "Yea uhm this installer hasent been finished lol sucks to be you I guess it doesnt really automate the run of the program on startup"
+            echo "Also keep in mind that you need to be a sudoer otherwise this installer cant install dependencies for ya you know~"
+            echo "Make sure your internet connection works otherwise it will die lmeo"
+            sleep 10
             sudo apt update
             sudo apt install wget alsa pulseaudio libasound2-dev unzip
             cd ~||exit
             wget https://512mb.org/files/itl_chorus/bin/acer-client-32bit.zip
             unzip ./acer-client-32bit.zip
-            touch .profile
-            mv ./.profile ./.profile-backup
+            #touch .profile
+            #mv ./.profile ./.profile-backup
             
             ;;
             1)     dialog --title "Installation canceled" --msgbox "Okay uhm great i guess?" 5 40;clear ;;
             255)   echo "Action Cancelled – Presssed [ESC] key.";;
             esac
-            echo "Binary Acer netbook installer (i686 32bit)"
+            echo "Binary Acer netbook installer (i686 32bit) Should work on most i686 32bit machines however"
             ;;
         2)
             dialog --title "crt quickdep" \
