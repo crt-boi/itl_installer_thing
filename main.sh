@@ -40,7 +40,7 @@ clear
 case $CHOICE in
         1)
             dialog --title "crt quickdep" \
-            --yesno "Would you like to install Synfone2 for i686 32bit machines?" 7 60
+            --yesno "Would you like to install Synfone2 for i686 32bit Ubuntu 16 machines?" 7 60
             result=$?
             case $result in
             0)
@@ -65,7 +65,7 @@ case $CHOICE in
             ;;
         2)
             dialog --title "crt quickdep" \
-            --yesno "Would you like to install Synfone2 for 64bit HP desktops)" 7 60
+            --yesno "Would you like to install Synfone2 binary for 64bit Archlinux machine? )" 7 60
             result=$?
             case $result in
             0)
@@ -101,7 +101,7 @@ case $CHOICE in
             1)     dialog --title "Installation canceled" --msgbox "Okay uhm great i guess?" 5 40;clear ;;
             255)   echo "Action Cancelled – Presssed [ESC] key.";;
             esac
-            echo "Binary HP desktop installer (amd64 64bit) Your installation should be done as of now id say lol."
+            echo "Binary HP desktop installer (amd64 64bit) Should work on most machines"
             ;;
         3)
             dialog --title "crt quickdep" \
