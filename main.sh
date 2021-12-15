@@ -54,6 +54,8 @@ case $CHOICE in
             cd ~||exit
             wget https://512mb.org/files/itl_chorus/bin/acer-client-32bit.zip
             unzip ./acer-client-32bit.zip
+            cd ./acer-client-32bit ||exit
+            ./synfone client ./gens/test.gen
             #touch .profile
             #mv ./.profile ./.profile-backup
             
