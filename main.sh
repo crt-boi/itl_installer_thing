@@ -90,13 +90,17 @@ case $CHOICE in
             autostart=$?
             case $autostart in
             0)
+
                 clear #todo
+                echo 'Yea i didnt code this yet'
                 ;;
             1)
                 clear #todo
+                echo 'Yea i didnt code this yet'
                 ;;
             255)
                 clear #todo
+                echo 'Yea i didnt code this yet'
                 ;;
             esac
             ;;
@@ -107,10 +111,10 @@ case $CHOICE in
             ;;
         3)
             dialog --title "crt quickdep" \
-            --yesno "Would you like to install the base workstation package?" 7 60
+            --yesno "You do realize that this isnt done yet right?" 7 60
             result=$?
             case $result in
-            0)     clear; echo it worked;;
+            0)     clear; echo wow nothing;;
             1)     dialog --title "Installation canceled" --msgbox "Okay uhm great i guess?" 5 40;clear ;;
             255)   echo "Action Cancelled – Presssed [ESC] key.";;
             esac
